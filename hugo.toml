@@ -11,11 +11,10 @@ theme = "PaperMod"
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   defaultTheme = "dark"
-
+  customCSS = ["css/custom.css"]
 [params.homeInfoParams]
   Title = "Enquanto Compila"
-  Content = "Olá! Eu sou Gabriely Vicente, estudante do último ano de Engenharia de Computação no Instituto Federal Fluminense e esse é o Enquanto Compila. Um espaço que nasceu de uma vontade de documentar projetos e problemas reais e o raciocínio por trás de cada uma das soluções da forma menos complicada possível.\n\nEnquanto Compila é aquela sensação de bater um papo no cafezinho da tarde com bolinho quente e conversa boa. Entender um código é importante mas não precisa ser complicado."
-
+  Content = "<div style='text-align: justify;'>Olá! Eu sou Gabriely Vicente, estudante do último ano de Engenharia de Computação no Instituto Federal Fluminense e esse é o Enquanto Compila.<br><br>Um espaço que nasceu de uma vontade de documentar projetos e problemas reais e o raciocínio por trás de cada uma das soluções da forma menos complicada possível.<br><br>Enquanto Compila é aquela sensação de bater um papo no cafezinho da tarde, com bolinho quente e conversa boa. Entender um código é importante mas não precisa ser complicado.</div>"
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/gabientt"
@@ -31,3 +30,6 @@ theme = "PaperMod"
 [markup.highlight]
   style = "dracula"
   lineNos = true
+
+[markup.goldmark.renderer]
+  unsafe = true

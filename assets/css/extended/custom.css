@@ -1,0 +1,52 @@
+/* Tema Claro: Fundo branco e detalhes lilás */
+:root {
+  --theme: #ffffff;        /* Fundo principal da página (branco) */
+  --entry: #fdfafc;        /* Fundo dos posts (branco levemente lilás) */
+  --primary: #4a235a;      /* Texto principal (roxo escuro para boa leitura) */
+  --secondary: #9b59b6;    /* Textos secundários e datas (lilás) */
+  --tertiary: #d7bde2;     /* Bordas e divisões */
+  --radius: 8px;           /* Arredondamento das bordas (opcional) */
+}
+
+/* Forçando a cor dos links e do título */
+.logo a, a {
+  color: #9b59b6 !important;
+}
+
+a:hover {
+  color: #8e44ad !important;
+}
+
+/* Ícones sociais e Botão de tema */
+.social-icons a, #theme-toggle {
+  color: #9b59b6 !important;
+}
+
+/* Tema Escuro: Fundo roxo noturno e texto lilás claro */
+.dark {
+  --theme: #1a1025;        /* Fundo principal da página (roxo bem escuro) */
+  --entry: #241636;        /* Fundo dos cards/posts (roxo um pouco mais claro) */
+  --primary: #fdfafc;      /* Texto principal (quase branco para leitura) */
+  --secondary: #e8d5f5;    /* Textos secundários e datas (lilás claro) */
+  --tertiary: #4a235a;     /* Bordas e divisões (roxo médio) */
+}
+
+/* Ajuste de links e botões no modo escuro para melhor contraste */
+.dark a, .dark .logo a, .dark .social-icons a, .dark #theme-toggle {
+  color: #c39bd3 !important;
+}
+
+.dark a:hover {
+  color: #e8d5f5 !important;
+}
+
+/* Alinhamento justificado do texto de apresentação */
+.home-info .entry-content {
+  text-align: justify;
+}
+
+/* Forçando o alinhamento justificado nos parágrafos */
+.home-info .entry-content,
+.home-info .entry-content p {
+  text-align: justify !important;
+}

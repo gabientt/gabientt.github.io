@@ -1,0 +1,34 @@
+body {
+  background-color: #1a1a2e !important;
+  color: #e8d5f5 !important;
+}
+
+.logo a, .logo span {
+  color: #c39bd3 !important;
+}
+
+a { color: #c39bd3 !important; }
+a:hover { color: #e8d5f5 !important; }
+
+header, .header {
+  background-color: #1a1a2e !important;
+  border-bottom: 1px solid #6c3483 !important;
+}
+
+.post-entry {
+  background-color: #16213e !important;
+  border: 1px solid #6c3483 !important;
+  border-radius: 8px !important;
+}
+
+.entry-header h2 a {
+  color: #c39bd3 !important;
+}
+
+.home-info h1 {
+  color: #e8d5f5 !important;
+}
+
+.entry-footer, .post-meta {
+  color: #9b59b6 !important;
+}
