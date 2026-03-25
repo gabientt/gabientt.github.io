@@ -22,8 +22,8 @@ params:
     image: 'perfil.jpeg'
     button:
       enable: true
-      name: 'Ver meu GitHub'
-      url: 'https://github.com/gabientt'
+      name: 'Ver Projetos'
+      url: '/posts/'
       newPage: true
     socialLinks:
       fontAwesomeIcons:
