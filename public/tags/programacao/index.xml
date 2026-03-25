@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programacao on Enquanto Compila | Gabriely Vicente</title>
-    <link>https://gabientt.github.io/tags/programacao/</link>
+    <link>http://localhost:1313/tags/programacao/</link>
     <description>Recent content in Programacao on Enquanto Compila | Gabriely Vicente</description>
     <generator>Hugo</generator>
     <language>pt-br</language>
     <lastBuildDate>Fri, 20 Mar 2026 12:00:00 -0300</lastBuildDate>
-    <atom:link href="https://gabientt.github.io/tags/programacao/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/programacao/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Primeiro Post</title>
-      <link>https://gabientt.github.io/posts/primeiro-post/</link>
+      <link>http://localhost:1313/posts/primeiro-post/</link>
       <pubDate>Fri, 20 Mar 2026 12:00:00 -0300</pubDate>
-      <guid>https://gabientt.github.io/posts/primeiro-post/</guid>
+      <guid>http://localhost:1313/posts/primeiro-post/</guid>
       <description>&lt;p&gt;Esse é o primeiro post do meu blog. Aqui vou documentar meus projetos e explicar o raciocínio por trás de cada um.&lt;/p&gt;</description>
     </item>
   </channel>

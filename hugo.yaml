@@ -17,7 +17,7 @@ params:
     enable: true
     intro: 'Ola, eu sou a'
     title: 'Gabriely Vicente'
-    subtitle: 'Estudante de Engenharia de Computacao'
+    subtitle: 'Estudante de Engenharia de Computação'
     content: 'Bem-vindos ao Enquanto Compila.'
     image: 'perfil.jpeg'
     button:
