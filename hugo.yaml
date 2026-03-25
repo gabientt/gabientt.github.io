@@ -1,0 +1,49 @@
+baseURL: 'https://gabientt.github.io/'
+languageCode: 'pt-br'
+title: 'Enquanto Compila | Gabriely Vicente'
+theme: 'hugo-profile'
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  title: 'Enquanto Compila'
+  description: 'Projetos de uma engenheira de computacao'
+
+  hero:
+    enable: true
+    intro: 'Ola, eu sou a'
+    title: 'Gabriely Vicente'
+    subtitle: 'Estudante de Engenharia de Computacao'
+    content: 'Bem-vindos ao Enquanto Compila.'
+    image: 'perfil.jpeg'
+    button:
+      enable: true
+      name: 'Ver meu GitHub'
+      url: 'https://github.com/gabientt'
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: 'https://github.com/gabientt'
+        - icon: fab fa-linkedin
+          url: 'https://www.linkedin.com/in/gabriely-vicente-7b6931272'
+
+  about:
+    enable: true
+    title: 'Sobre o Enquanto Compila'
+    content: 'Enquanto Compila e aquela sensacao de bater um papo no cafezinho da tarde com bolinho quente e conversa boa.'
+
+  blog:
+    enable: true
+    title: 'Posts'
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /posts
+      weight: 1
