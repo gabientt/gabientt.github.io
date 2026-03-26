@@ -13,6 +13,23 @@ params:
   title: 'Enquanto Compila'
   description: 'Projetos de uma engenheira de computacao'
 
+  color:
+    backgroundColor: "#F5EAEC"
+    secondaryBackgroundColor: "#F0DDE0"
+    textColor: "#4E2D28"
+    secondaryTextColor: "#70454E"
+    primaryColor: "#70454E"
+    secondaryColor: "#F0DDE0"
+    textLinkColor: "#AE736F"
+    darkmode:
+      backgroundColor: "#281A1A"
+      secondaryBackgroundColor: "#4E2D28"
+      textColor: "#F5EAEC"
+      secondaryTextColor: "#DDA8B0"
+      primaryColor: "#DDA8B0"
+      secondaryColor: "#4E2D28"
+      textLinkColor: "#AE736F"
+
   hero:
     enable: true
     intro: 'Ola, eu sou a'

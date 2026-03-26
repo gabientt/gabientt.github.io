@@ -1,0 +1,8 @@
+
+[params.color]
+  primaryColor = "#DDA8B0"
+  secondaryColor = "#70454E"
+
+[params.color.darkmode]
+  primaryColor = "#DDA8B0"
+  secondaryColor = "#281A1A"

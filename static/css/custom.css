@@ -1,506 +1,407 @@
 /* =====================================================
-   Enquanto Compila — Warm Beige / Terracotta Theme
+   Enquanto Compila — Burgundy / Blush Theme
    (Fonts loaded via layouts/partials/head/extensions.html)
    ===================================================== */
 
-/* ── Light Theme Variables ─────────────────────────── */
+/* ── Theme CSS Variable Overrides ──────────────────── */
+/* These shadow the theme's inline :root vars from head.html */
 :root {
-  --theme:        #F5EDE3;
-  --entry:        #FBF5EE;
-  --primary:      #5C4033;
-  --secondary:    #8B6347;
-  --tertiary:     #D4B896;
-  --content:      #6B4C3B;
-  --hljs-bg:      #EEE3D6;
-  --code-bg:      #EEE3D6;
-  --border:       #C9A882;
-  --accent:       #C9A882;
-  --accent-dark:  #A0522D;
+  --background-color:           #F5EAEC;
+  --secondary-background-color: #F0DDE0;
+  --text-color:                 #4E2D28;
+  --text-secondary-color:       #70454E;
+  --primary-color:              #70454E;
+  --secondary-color:            #F0DDE0;
+  --text-link-color:            #AE736F;
+
+  /* Blog component vars */
+  --theme:        #F5EAEC;
+  --entry:        #fff8f8;
+  --accent:       #70454E;
+  --accent-dark:  #4E2D28;
+  --tertiary:     #DDA8B0;
+  --content:      #4E2D28;
   --radius:       12px;
   --font-heading: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Lato', system-ui, -apple-system, sans-serif;
-  --shadow-sm:    0 2px 10px rgba(92, 64, 51, 0.08);
-  --shadow-card:  0 4px 20px rgba(92, 64, 51, 0.10);
-  --shadow-hover: 0 8px 32px rgba(92, 64, 51, 0.18);
   --transition:   0.3s ease;
+
+  /* Kill Bootstrap blue links */
+  --bs-link-color:       #AE736F;
+  --bs-link-hover-color: #70454E;
 }
 
-/* ── Dark Theme Variables (warm dark tones) ────────── */
 .dark {
-  --theme:        #2A1F1A;
-  --entry:        #3A2820;
-  --primary:      #F0E0CC;
-  --secondary:    #C9A882;
-  --tertiary:     #5C4033;
-  --content:      #D4B896;
-  --hljs-bg:      #3A2820;
-  --code-bg:      #3A2820;
-  --border:       #6B4C3B;
-  --accent:       #C9A882;
-  --accent-dark:  #E8C49A;
-  --shadow-sm:    0 2px 10px rgba(0, 0, 0, 0.25);
-  --shadow-card:  0 4px 20px rgba(0, 0, 0, 0.30);
-  --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.45);
+  /* Override dark mode source vars — picked up by theme.css */
+  --background-color-dark:           #281A1A;
+  --secondary-background-color-dark: #4E2D28;
+  --text-color-dark:                 #F5EAEC;
+  --text-secondary-color-dark:       #DDA8B0;
+  --primary-color-dark:              #DDA8B0;
+  --secondary-color-dark:            #4E2D28;
+  --text-link-color-dark:            #AE736F;
+
+  /* Blog component vars */
+  --theme:       #281A1A;
+  --entry:       #4E2D28;
+  --accent:      #DDA8B0;
+  --accent-dark: #AE736F;
+  --tertiary:    #70454E;
+  --content:     #DDA8B0;
+
+  --bs-link-color:       #AE736F;
+  --bs-link-hover-color: #DDA8B0;
 }
 
 /* ── Base ──────────────────────────────────────────── */
-/* Override theme's inline html{background-color} rule */
 html {
-  background-color: var(--theme) !important;
+  background-color: #F5EAEC !important;
 }
-
 body {
-  background-color: var(--theme) !important;
-  color: var(--primary) !important;
+  background-color: #F5EAEC !important;
+  color: #4E2D28 !important;
   font-family: var(--font-body) !important;
 }
+body.dark {
+  background-color: #281A1A !important;
+  color: #F5EAEC !important;
+}
 
+/* ── Headings ──────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--font-heading) !important;
-  color: var(--primary) !important;
+  color: #70454E !important;
   letter-spacing: -0.01em;
 }
 
-/* ── Bootstrap link variable overrides (kills default blue) ── */
-:root {
-  --bs-link-color: #A0522D !important;
-  --bs-link-hover-color: #C9A882 !important;
+.dark h1, .dark h2, .dark h3,
+.dark h4, .dark h5, .dark h6 {
+  color: #DDA8B0 !important;
 }
 
-.dark {
-  --bs-link-color: #C9A882 !important;
-  --bs-link-hover-color: #E8C49A !important;
+/* ── Bootstrap link variable overrides ─────────────── */
+:root {
+  --bs-link-color-rgb: 174, 115, 111;
 }
 
 /* ── Global Links ──────────────────────────────────── */
 a {
-  color: var(--accent-dark) !important;
+  color: #AE736F !important;
   text-decoration: none;
   transition: color var(--transition), opacity var(--transition) !important;
 }
-
 a:hover {
-  color: var(--accent) !important;
+  color: #70454E !important;
   opacity: 0.9;
 }
-
 .dark a {
-  color: var(--accent) !important;
+  color: #AE736F !important;
 }
-
 .dark a:hover {
-  color: var(--accent-dark) !important;
+  color: #DDA8B0 !important;
   opacity: 1;
 }
 
-/* ── Navbar / Header ───────────────────────────────── */
-header, .header, #top-nav {
-  background-color: var(--theme) !important;
-  border-bottom: 1px solid var(--tertiary) !important;
-  box-shadow: var(--shadow-sm) !important;
-  transition: background-color var(--transition),
-              border-color var(--transition),
-              box-shadow var(--transition) !important;
+/* ── Navbar / Header — #profileHeader ─────────────── */
+/* Light mode: warm brown background */
+#profileHeader,
+#profileHeader nav.navbar {
+  background-color: #4E2D28 !important;
+  border-bottom: 1px solid #70454E !important;
 }
 
-/* Site title / navbar brand */
-.navbar-brand,
-.logo a, .logo span {
+/* Dark mode: deep burgundy background */
+body.dark #profileHeader,
+body.dark #profileHeader nav.navbar {
+  background-color: #281A1A !important;
+  border-bottom: 1px solid #4E2D28 !important;
+}
+
+/* ── Navbar Brand ("Enquanto Compila") ─────────────── */
+#profileHeader .navbar-brand,
+#profileHeader .navbar-brand span,
+#profileHeader .navbar-brand * {
+  color: #DDA8B0 !important;
   font-family: var(--font-heading) !important;
-  font-size: 1.25rem !important;
   font-weight: 700 !important;
-  color: var(--accent) !important;        /* #C9A882 in light mode */
-  letter-spacing: 0.01em;
-  transition: color var(--transition) !important;
 }
-
-.navbar-brand:hover,
-.logo a:hover {
-  color: var(--accent-dark) !important;   /* #A0522D on hover */
+#profileHeader .navbar-brand:hover,
+#profileHeader .navbar-brand:hover * {
+  color: #F5EAEC !important;
   opacity: 1 !important;
 }
 
-.dark .navbar-brand,
-.dark .logo a, .dark .logo span {
-  color: #F0E0CC !important;              /* warm cream in dark mode */
-}
-
-.dark .navbar-brand:hover,
-.dark .logo a:hover {
-  color: var(--accent-dark) !important;
-}
-
-/* Nav menu links */
-nav a, .menu a, #menu a,
-.nav-link, .navbar-nav a,
-.navbar-nav .nav-item a {
-  color: var(--accent) !important;        /* #C9A882 */
+/* ── Nav Links ("Sobre o Enquanto Compila", "Blog") ── */
+#profileHeader .navbar .navbar-nav a,
+#profileHeader .navbar .nav-link,
+#profileHeader .navbar-text a,
+header .navbar .navbar-nav a {
+  color: #DDA8B0 !important;
   font-weight: 500;
-  letter-spacing: 0.03em;
-  transition: color var(--transition) !important;
+}
+#profileHeader .navbar .navbar-nav a:hover,
+#profileHeader .navbar .nav-link:hover,
+header .navbar .navbar-nav a:hover {
+  color: #F5EAEC !important;
+  opacity: 1 !important;
 }
 
-nav a:hover, .menu a:hover, #menu a:hover,
-.nav-link:hover, .navbar-nav a:hover {
-  color: var(--accent-dark) !important;   /* #A0522D on hover */
+/* ── Theme Toggle Button ───────────────────────────── */
+#profileHeader #theme-toggle,
+#theme-toggle {
+  background-color: transparent !important;
+  color: #DDA8B0 !important;
 }
-
-.dark nav a, .dark .menu a, .dark #menu a,
-.dark .nav-link, .dark .navbar-nav a {
-  color: var(--accent) !important;
-}
-
-.dark nav a:hover, .dark .menu a:hover,
-.dark .navbar-nav a:hover {
-  color: var(--accent-dark) !important;
-}
-
-/* Theme toggle & nav icons */
-.social-icons a, #theme-toggle {
-  color: var(--secondary) !important;
-  transition: color var(--transition), transform var(--transition) !important;
-}
-
-.social-icons a:hover, #theme-toggle:hover {
-  color: var(--accent-dark) !important;
-  transform: scale(1.12);
-}
-
-.dark .social-icons a, .dark #theme-toggle {
-  color: var(--accent) !important;
-}
-
-.dark .social-icons a:hover, .dark #theme-toggle:hover {
-  color: var(--accent-dark) !important;
+#profileHeader #theme-toggle svg,
+#theme-toggle svg {
+  fill: #DDA8B0 !important;
+  color: #DDA8B0 !important;
 }
 
 /* ── Hero Section ──────────────────────────────────── */
-#hero, section#hero, .hero {
-  background: linear-gradient(
-    135deg,
-    #F5EDE3 0%,
-    #EDD9C0 55%,
-    #D4B896 100%
-  ) !important;
-  padding: 5rem 0;
-  position: relative;
-  overflow: hidden;
+#hero {
+  background-color: #F5EAEC !important;
+}
+body.dark #hero {
+  background-color: #281A1A !important;
 }
 
-.dark #hero, .dark section#hero, .dark .hero {
-  background: linear-gradient(
-    135deg,
-    #2A1F1A 0%,
-    #3A2820 55%,
-    #4A3428 100%
-  ) !important;
-}
-
-/* "Ola, eu sou a" label */
-.subtitle,
-#hero .subtitle,
-section#hero .subtitle {
-  display: block;
-  font-family: var(--font-body) !important;
-  font-size: 0.75rem !important;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #A0522D !important;
-  margin-bottom: 0.5rem;
-}
-
-.dark .subtitle,
-.dark #hero .subtitle {
-  color: var(--accent) !important;        /* #C9A882 in dark mode */
-}
-
-/* Main name heading — Bodoni Moda */
-#hero h1, section#hero h1, .hero h1,
-.profile h1, .home-info h1 {
-  font-family: 'Bodoni Moda', serif !important;
-  font-size: clamp(2.5rem, 6vw, 5rem) !important;
-  font-weight: 400 !important;
-  color: var(--primary) !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
-  line-height: 1 !important;
-}
-
-/* h2, h3 keep Playfair Display */
-#hero h2, section#hero h2, .hero h2,
-h2, h3, .h2, .h3 {
-  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
-}
-
-#hero h2, section#hero h2, .hero h2 {
+/* Hero name (h1) */
+#hero h1 {
+  color: #70454E !important;
   font-family: var(--font-heading) !important;
-  font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
-  color: var(--secondary) !important;
-  font-weight: 400;
-  font-style: italic;
+}
+body.dark #hero h1 {
+  color: #DDA8B0 !important;
 }
 
-#hero p, section#hero p, .hero p {
-  color: var(--content) !important;
-  font-size: 1.05rem;
-  line-height: 1.75;
+/* Hero subtitle/tagline (h2) */
+#hero h2 {
+  color: #AE736F !important;
+}
+body.dark #hero h2 {
+  color: #DDA8B0 !important;
+  opacity: 0.7;
 }
 
-/* ── Buttons ───────────────────────────────────────── */
-.btn,
-.btn-primary,
-a.btn,
-button.btn,
-input[type="submit"],
-input[type="button"] {
-  background-color: var(--accent) !important;
-  border-color: var(--accent) !important;
+/* Hero intro label */
+#hero .subtitle {
+  color: #AE736F !important;
+}
+body.dark #hero .subtitle {
+  color: #DDA8B0 !important;
+}
+
+/* Hero body text */
+#hero p {
+  color: #4E2D28 !important;
+  opacity: 1 !important;
+}
+body.dark #hero p {
+  color: #DDA8B0 !important;
+}
+
+/* ── Profile Image ─────────────────────────────────── */
+#hero .image img,
+img.rounded-circle,
+.profile-image {
+  border: 3px solid #DDA8B0 !important;
+  box-shadow: 0 6px 24px rgba(221, 168, 176, 0.35) !important;
+}
+
+/* ── Button — "Ver Projetos" ───────────────────────── */
+#hero a.btn:not(.social-icon) {
+  background-color: #70454E !important;
+  border-color: #70454E !important;
   color: #fff !important;
-  border-radius: 50px !important;
-  padding: 0.6rem 1.8rem !important;
-  font-family: var(--font-body) !important;
-  font-weight: 700;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  box-shadow: 0 3px 12px rgba(201, 168, 130, 0.35);
-  transition: background-color var(--transition),
-              border-color var(--transition),
-              box-shadow var(--transition),
-              transform var(--transition) !important;
+  border-radius: 0.75rem !important;
 }
-
-.btn:hover,
-.btn-primary:hover,
-a.btn:hover,
-button.btn:hover {
-  background-color: var(--accent-dark) !important;
-  border-color: var(--accent-dark) !important;
+#hero a.btn:not(.social-icon):hover {
+  background-color: #4E2D28 !important;
+  border-color: #4E2D28 !important;
   color: #fff !important;
-  box-shadow: 0 6px 20px rgba(160, 82, 45, 0.40) !important;
-  transform: translateY(-2px);
   opacity: 1 !important;
 }
 
-.btn:active,
-.btn-primary:active {
-  transform: translateY(0) !important;
-}
+/* ── Social Icons — GitHub / LinkedIn ─────────────── */
+/* body.light / body.dark prefixes give higher specificity than
+   index.css's bare "#hero a.btn.social-icon" selector,
+   ensuring these rules win even though index.css loads after. */
 
-/* ── Post / Blog Cards ─────────────────────────────── */
-.post-entry {
-  background-color: var(--entry) !important;
-  border: 1px solid var(--tertiary) !important;
-  border-radius: var(--radius) !important;
-  box-shadow: var(--shadow-card) !important;
-  overflow: hidden;
-  transition: box-shadow var(--transition),
-              transform var(--transition),
-              border-color var(--transition) !important;
+/* Light mode */
+body.light #hero a.btn.social-icon,
+body #hero a.btn.social-icon {
+  background-color: #70454E !important;
+  border-color: #70454E !important;
+  color: #DDA8B0 !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
 }
-
-.post-entry:hover {
-  box-shadow: var(--shadow-hover) !important;
-  transform: translateY(-4px);
-  border-color: var(--accent) !important;
+body.light #hero a.btn.social-icon i,
+body.light #hero a.btn.social-icon svg,
+body.light #hero a.btn.social-icon svg path,
+body #hero a.btn.social-icon i {
+  color: #DDA8B0 !important;
+  fill: #DDA8B0 !important;
 }
-
-.entry-header h2 a {
-  font-family: var(--font-heading) !important;
-  color: var(--primary) !important;
-  font-weight: 600;
-  transition: color var(--transition) !important;
-}
-
-.entry-header h2 a:hover {
-  color: var(--accent-dark) !important;
-}
-
-.entry-content {
-  color: var(--content) !important;
-  line-height: 1.75;
-}
-
-.entry-footer, .post-meta {
-  color: var(--secondary) !important;
-  font-size: 0.85rem;
-}
-
-/* "Read More" / post footer links */
-.entry-footer a,
-.read-more {
-  color: var(--accent-dark) !important;
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  transition: color var(--transition),
-              letter-spacing var(--transition) !important;
-}
-
-.entry-footer a:hover,
-.read-more:hover {
-  color: var(--accent) !important;
-  letter-spacing: 0.08em;
+body.light #hero a.btn.social-icon:hover,
+body #hero a.btn.social-icon:hover {
+  background-color: #4E2D28 !important;
+  border-color: #4E2D28 !important;
+  color: #DDA8B0 !important;
   opacity: 1 !important;
 }
 
-/* ── Home Info (homeInfoParams hero card) ──────────── */
-.home-info {
-  background: linear-gradient(135deg, #FAF0E4 0%, #EDD9C0 100%) !important;
-  border: 1px solid var(--tertiary) !important;
-  border-radius: var(--radius) !important;
-  padding: 2.8rem 2.5rem;
-  box-shadow: var(--shadow-card) !important;
-  text-align: center;
-  margin: 2rem auto;
-  transition: box-shadow var(--transition) !important;
+/* Dark mode */
+body.dark #hero a.btn.social-icon {
+  background-color: #70454E !important;
+  border-color: #70454E !important;
+  color: #DDA8B0 !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
 }
-
-.dark .home-info {
-  background: linear-gradient(135deg, #3A2820 0%, #4A3428 100%) !important;
-  border-color: var(--tertiary) !important;
+body.dark #hero a.btn.social-icon i,
+body.dark #hero a.btn.social-icon svg,
+body.dark #hero a.btn.social-icon svg path {
+  color: #DDA8B0 !important;
+  fill: #DDA8B0 !important;
 }
-
-.home-info:hover {
-  box-shadow: var(--shadow-hover) !important;
-}
-
-.home-info h1 {
-  font-family: var(--font-heading) !important;
-  font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
-  color: var(--primary) !important;
-  font-weight: 700;
-}
-
-.home-info .entry-content,
-.home-info .entry-content p {
-  color: var(--content) !important;
-  text-align: justify !important;
-  font-size: 1.05rem;
-  line-height: 1.8;
+body.dark #hero a.btn.social-icon:hover {
+  background-color: #AE736F !important;
+  border-color: #AE736F !important;
+  color: #fff !important;
+  opacity: 1 !important;
 }
 
 /* ── About Section ─────────────────────────────────── */
-#about, section#about {
-  background-color: var(--theme) !important;
+#about {
+  background-color: #F5EAEC !important;
 }
-
-#about p, #about .about-content,
-section#about p {
-  color: var(--content) !important;
+body.dark #about {
+  background-color: #281A1A !important;
+}
+#about p, #about .about-content {
+  color: #4E2D28 !important;
   line-height: 1.8;
   text-align: justify;
+}
+body.dark #about p {
+  color: #DDA8B0 !important;
 }
 
 /* ── Section Titles ────────────────────────────────── */
 .section-title,
 section .text-center h2 {
   font-family: var(--font-heading) !important;
-  color: var(--primary) !important;
+  color: #70454E !important;
+}
+body.dark .section-title,
+body.dark section .text-center h2 {
+  color: #DDA8B0 !important;
 }
 
-/* ── Profile / Avatar Image ────────────────────────── */
-img.rounded-circle,
-.profile-image {
-  border: 4px solid var(--accent) !important;
-  box-shadow: 0 6px 24px rgba(201, 168, 130, 0.30) !important;
-  transition: box-shadow var(--transition), transform var(--transition) !important;
+/* ── Post / Blog Cards ─────────────────────────────── */
+.post-entry {
+  background-color: #fff8f8 !important;
+  border: 1px solid #DDA8B0 !important;
+  border-radius: var(--radius) !important;
+  transition: box-shadow var(--transition),
+              transform var(--transition),
+              border-color var(--transition) !important;
+}
+.post-entry:hover {
+  transform: translateY(-4px);
+  border-color: #70454E !important;
+}
+body.dark .post-entry {
+  background-color: #4E2D28 !important;
+  border-color: #70454E !important;
 }
 
-img.rounded-circle:hover,
-.profile-image:hover {
-  box-shadow: 0 10px 36px rgba(201, 168, 130, 0.45) !important;
-  transform: scale(1.02);
-}
-
-/* ── Tags / Badges ─────────────────────────────────── */
-.post-tags a, .tag, .badge {
-  background-color: var(--tertiary) !important;
-  color: var(--primary) !important;
-  border-radius: 50px !important;
-  padding: 0.2rem 0.75rem !important;
-  font-size: 0.78rem;
+.entry-header h2 a {
+  font-family: var(--font-heading) !important;
+  color: #70454E !important;
   font-weight: 600;
-  transition: background-color var(--transition),
-              color var(--transition) !important;
+}
+.entry-header h2 a:hover {
+  color: #4E2D28 !important;
+}
+body.dark .entry-header h2 a {
+  color: #DDA8B0 !important;
 }
 
-.post-tags a:hover, .tag:hover, .badge:hover {
-  background-color: var(--accent) !important;
-  color: #fff !important;
+.entry-content {
+  color: #4E2D28 !important;
+  line-height: 1.75;
+}
+body.dark .entry-content {
+  color: #DDA8B0 !important;
+}
+
+.entry-footer, .post-meta {
+  color: #70454E !important;
+  font-size: 0.85rem;
+}
+
+.entry-footer a, .read-more {
+  color: #AE736F !important;
+  font-weight: 600;
+}
+.entry-footer a:hover, .read-more:hover {
+  color: #70454E !important;
   opacity: 1 !important;
-}
-
-/* ── Pagination ────────────────────────────────────── */
-.pagination .page-link {
-  background-color: var(--entry) !important;
-  border-color: var(--tertiary) !important;
-  color: var(--primary) !important;
-  transition: background-color var(--transition),
-              border-color var(--transition),
-              color var(--transition) !important;
-}
-
-.pagination .page-link:hover {
-  background-color: var(--accent) !important;
-  border-color: var(--accent) !important;
-  color: #fff !important;
 }
 
 /* ── Footer ────────────────────────────────────────── */
 footer, .footer {
-  background-color: var(--theme) !important;
-  border-top: 1px solid var(--tertiary) !important;
-  color: var(--secondary) !important;
+  background-color: #F5EAEC !important;
+  border-top: 1px solid #DDA8B0 !important;
+  color: #70454E !important;
 }
-
+body.dark footer, body.dark .footer {
+  background-color: #281A1A !important;
+  border-top-color: #4E2D28 !important;
+}
 footer a, .footer a {
-  color: var(--secondary) !important;
-  transition: color var(--transition) !important;
+  color: #AE736F !important;
+}
+footer a:hover, .footer a:hover {
+  color: #70454E !important;
+  opacity: 1 !important;
 }
 
-footer a:hover, .footer a:hover {
-  color: var(--accent-dark) !important;
+/* ── Tags / Badges ─────────────────────────────────── */
+.post-tags a, .tag, .badge {
+  background-color: #DDA8B0 !important;
+  color: #281A1A !important;
+  border-radius: 50px !important;
+  padding: 0.2rem 0.75rem !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.post-tags a:hover, .tag:hover, .badge:hover {
+  background-color: #70454E !important;
+  color: #fff !important;
   opacity: 1 !important;
 }
 
 /* ── Code Blocks ───────────────────────────────────── */
 pre, code {
-  background-color: var(--code-bg) !important;
+  background-color: #F0DDE0 !important;
   border-radius: 6px !important;
-  border: 1px solid var(--tertiary) !important;
+  border: 1px solid #DDA8B0 !important;
+}
+body.dark pre, body.dark code {
+  background-color: #4E2D28 !important;
+  border-color: #70454E !important;
 }
 
 /* ── Scrollbar ─────────────────────────────────────── */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: var(--theme); }
+::-webkit-scrollbar-track { background: #F5EAEC; }
 ::-webkit-scrollbar-thumb {
-  background: var(--tertiary) !important;
+  background: #DDA8B0 !important;
   border-radius: 4px !important;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--accent) !important; }
-
-/* ── Single Post Page ──────────────────────────────── */
-.post-title {
-  font-family: var(--font-heading) !important;
-  color: var(--primary) !important;
-}
-
-article .content,
-.post-content {
-  color: var(--content) !important;
-  line-height: 1.85;
-}
-
-article .content h1,
-article .content h2,
-article .content h3,
-.post-content h1,
-.post-content h2,
-.post-content h3 {
-  font-family: var(--font-heading) !important;
-  color: var(--primary) !important;
-  margin-top: 2rem;
-}
+::-webkit-scrollbar-thumb:hover { background: #70454E !important; }
