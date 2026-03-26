@@ -34,7 +34,7 @@ params:
     enable: true
     intro: 'Ola, eu sou a'
     title: 'Gabriely Vicente'
-    subtitle: 'Estudante de Engenharia de Computação'
+    subtitle: 'Desenvolvedora Full Stack'
     content: 'Bem-vindos ao Enquanto Compila.'
     image: 'perfil.jpeg'
     button:
