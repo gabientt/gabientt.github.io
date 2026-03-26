@@ -515,6 +515,17 @@ a.btn.social-icon svg path,
   fill:  #fff !important;
 }
 
+/* High-specificity override for hero social icon buttons (beats index.css) */
+#hero a.btn.social-icon {
+  background-color: #70454E !important;
+  border-color:     #70454E !important;
+}
+
+#hero a.btn.social-icon svg {
+  fill:  #ffffff !important;
+  color: #ffffff !important;
+}
+
 a.btn.social-icon i,
 .social-icons a i,
 #hero a.btn i {
