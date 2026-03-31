@@ -1,5 +1,5 @@
 /* =====================================================
-   Enquanto Compila — Burgundy / Blush Theme
+   Enquanto Compila — Navy / Off-White Theme
    ===================================================== */
 
 /* Google Fonts — Playfair Display (headings) + Lato (body) */
@@ -7,53 +7,51 @@
 
 /* ── Light Theme Variables ─────────────────────────── */
 :root {
-  --theme:        #F5EAEC;   /* blush-tinted page background      */
-  --entry:        #fff8f8;   /* card / post background            */
-  --primary:      #281A1A;   /* deep burgundy text                */
-  --secondary:    #70454E;   /* mauve secondary text / dates      */
-  --tertiary:     #DDA8B0;   /* blush borders & dividers          */
-  --content:      #4E2D28;   /* warm brown body copy              */
-  --hljs-bg:      #F0DDE0;
-  --code-bg:      #F0DDE0;
-  --border:       #DDA8B0;
-  --accent:       #70454E;   /* mauve accent                      */
-  --accent-dark:  #4E2D28;   /* warm brown (hover)                */
+  --theme:        #F8F8F8;   /* off-white page background             */
+  --entry:        #FFFFFF;   /* card / post background                */
+  --primary:      #1C2B40;   /* deep navy text                        */
+  --secondary:    #4A6285;   /* slate secondary text / dates          */
+  --tertiary:     #B8C9E0;   /* pale blue borders & dividers          */
+  --content:      #2D3748;   /* dark slate body copy                  */
+  --hljs-bg:      #EEF2F8;
+  --code-bg:      #EEF2F8;
+  --border:       #B8C9E0;
+  --accent:       #2B4C7E;   /* navy accent                           */
+  --accent-dark:  #1E3A66;   /* deeper navy (hover)                   */
   --radius:       12px;
   --font-heading: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Lato', system-ui, -apple-system, sans-serif;
-  --shadow-sm:    0 2px 10px rgba(40, 26, 26, 0.08);
-  --shadow-card:  0 4px 20px rgba(40, 26, 26, 0.10);
-  --shadow-hover: 0 8px 32px rgba(40, 26, 26, 0.18);
+  --shadow-sm:    0 2px 10px rgba(28, 43, 64, 0.08);
+  --shadow-card:  0 4px 20px rgba(28, 43, 64, 0.10);
+  --shadow-hover: 0 8px 32px rgba(28, 43, 64, 0.18);
   --transition:   0.3s ease;
 
-  /* Override theme's primary-color to prevent blue leaking into icons */
-  --primary-color: #DDA8B0 !important;
+  /* Override theme's primary-color */
+  --primary-color: #2B4C7E !important;
 }
 
 /* ── Dark Theme Variables ───────────────────────────── */
 .dark {
-  --theme:        #281A1A;
-  --entry:        #4E2D28;
-  --primary:      #F5EAEC;
-  --secondary:    #DDA8B0;
-  --tertiary:     #70454E;
-  --content:      #DDA8B0;
-  --hljs-bg:      #4E2D28;
-  --code-bg:      #4E2D28;
-  --border:       #70454E;
-  --accent:       #DDA8B0;   /* blush pink accent                 */
-  --accent-dark:  #AE736F;   /* dusty rose (hover)                */
+  --theme:        #0F1C2E;
+  --entry:        #1C2B40;
+  --primary:      #E8EEF5;
+  --secondary:    #7A9CC6;
+  --tertiary:     #2B4C7E;
+  --content:      #B8C9E0;
+  --hljs-bg:      #1C2B40;
+  --code-bg:      #1C2B40;
+  --border:       #2B4C7E;
+  --accent:       #7A9CC6;   /* light blue accent                     */
+  --accent-dark:  #4A7BC5;   /* brighter blue (hover)                 */
   --shadow-sm:    0 2px 10px rgba(0, 0, 0, 0.30);
   --shadow-card:  0 4px 20px rgba(0, 0, 0, 0.35);
   --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.50);
 
-  /* Override theme's primary-color in dark mode */
-  --primary-color: #DDA8B0 !important;
+  --primary-color: #7A9CC6 !important;
 }
 
-/* Also target [data-theme="dark"] in case the theme uses that attribute */
 [data-theme="dark"] {
-  --primary-color: #DDA8B0 !important;
+  --primary-color: #7A9CC6 !important;
 }
 
 /* ── Base ──────────────────────────────────────────── */
@@ -72,29 +70,29 @@ h1, h2, h3, h4, h5, h6,
 
 /* ── Global Links ──────────────────────────────────── */
 a {
-  color: #AE736F !important;
+  color: #4A7BC5 !important;
   text-decoration: none;
   transition: color var(--transition), opacity var(--transition) !important;
 }
 
 a:hover {
-  color: #70454E !important;
+  color: #2B4C7E !important;
   opacity: 0.9;
 }
 
 .dark a {
-  color: #AE736F !important;
+  color: #7A9CC6 !important;
 }
 
 .dark a:hover {
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
   opacity: 1;
 }
 
 /* ── Navbar / Header ───────────────────────────────── */
 header, .header, #top-nav {
-  background-color: #4E2D28 !important;
-  border-bottom: 1px solid #70454E !important;
+  background-color: #1C2B40 !important;
+  border-bottom: 1px solid #2B4C7E !important;
   box-shadow: var(--shadow-sm) !important;
   transition: background-color var(--transition),
               border-color var(--transition),
@@ -102,8 +100,8 @@ header, .header, #top-nav {
 }
 
 .dark header, .dark .header, .dark #top-nav {
-  background-color: #281A1A !important;
-  border-bottom: 1px solid #4E2D28 !important;
+  background-color: #0F1C2E !important;
+  border-bottom: 1px solid #1C2B40 !important;
 }
 
 /* Logo */
@@ -111,53 +109,53 @@ header, .header, #top-nav {
   font-family: var(--font-heading) !important;
   font-size: 1.25rem !important;
   font-weight: 700 !important;
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
   letter-spacing: 0.01em;
   transition: color var(--transition) !important;
 }
 
 .logo a:hover {
-  color: #F5EAEC !important;
+  color: #E8EEF5 !important;
   opacity: 1 !important;
 }
 
 /* Nav menu links */
 nav a, .menu a, #menu a, .nav-link {
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
   font-weight: 500;
   letter-spacing: 0.03em;
   transition: color var(--transition) !important;
 }
 
 nav a:hover, .menu a:hover, #menu a:hover, .nav-link:hover {
-  color: #F5EAEC !important;
+  color: #E8EEF5 !important;
 }
 
 .dark nav a, .dark .menu a, .dark #menu a {
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
 }
 
 .dark nav a:hover, .dark .menu a:hover {
-  color: #F5EAEC !important;
+  color: #E8EEF5 !important;
 }
 
 /* Theme toggle & nav icons */
 .social-icons a, #theme-toggle {
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
   transition: color var(--transition), transform var(--transition) !important;
 }
 
 .social-icons a:hover, #theme-toggle:hover {
-  color: #F5EAEC !important;
+  color: #E8EEF5 !important;
   transform: scale(1.12);
 }
 
 .dark .social-icons a, .dark #theme-toggle {
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
 }
 
 .dark .social-icons a:hover, .dark #theme-toggle:hover {
-  color: #F5EAEC !important;
+  color: #E8EEF5 !important;
 }
 
 /* ── Social Icons (GitHub, LinkedIn, etc.) ─────────── */
@@ -165,12 +163,12 @@ nav a:hover, .menu a:hover, #menu a:hover, .nav-link:hover {
 .social-icons a svg path,
 .social-icons a svg circle,
 .social-icons a svg rect {
-  fill: #DDA8B0 !important;
-  color: #DDA8B0 !important;
+  fill: #B8C9E0 !important;
+  color: #B8C9E0 !important;
 }
 
 .social-icons a {
-  background-color: #70454E !important;
+  background-color: #2B4C7E !important;
   border-radius: 50% !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -180,32 +178,32 @@ nav a:hover, .menu a:hover, #menu a:hover, .nav-link:hover {
 }
 
 .social-icons a:hover {
-  background-color: #4E2D28 !important;
+  background-color: #1E3A66 !important;
 }
 
 .dark .social-icons a {
-  background-color: #70454E !important;
+  background-color: #2B4C7E !important;
 }
 
 .dark .social-icons a:hover {
-  background-color: #4E2D28 !important;
+  background-color: #1E3A66 !important;
 }
 
 .dark .social-icons a svg,
 .dark .social-icons a svg path,
 .dark .social-icons a svg circle,
 .dark .social-icons a svg rect {
-  fill: #DDA8B0 !important;
-  color: #DDA8B0 !important;
+  fill: #B8C9E0 !important;
+  color: #B8C9E0 !important;
 }
 
 /* ── Hero Section ──────────────────────────────────── */
 #hero, section#hero, .hero {
   background: linear-gradient(
     135deg,
-    #F5EAEC 0%,
-    #EDCED4 55%,
-    #DDA8B0 100%
+    #F8F8F8 0%,
+    #E8EEF5 55%,
+    #B8C9E0 100%
   ) !important;
   padding: 5rem 0;
   position: relative;
@@ -215,9 +213,9 @@ nav a:hover, .menu a:hover, #menu a:hover, .nav-link:hover {
 .dark #hero, .dark section#hero, .dark .hero {
   background: linear-gradient(
     135deg,
-    #281A1A 0%,
-    #4E2D28 55%,
-    #70454E 100%
+    #0F1C2E 0%,
+    #1C2B40 55%,
+    #2B4C7E 100%
   ) !important;
 }
 
@@ -225,34 +223,34 @@ nav a:hover, .menu a:hover, #menu a:hover, .nav-link:hover {
   font-family: var(--font-heading) !important;
   font-size: clamp(2rem, 5vw, 3.8rem) !important;
   font-weight: 700 !important;
-  color: #281A1A !important;
+  color: #1C2B40 !important;
   line-height: 1.15;
 }
 
 .dark #hero h1, .dark section#hero h1, .dark .hero h1 {
-  color: #F5EAEC !important;
+  color: #E8EEF5 !important;
 }
 
 #hero h2, section#hero h2, .hero h2 {
   font-family: var(--font-heading) !important;
   font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
-  color: #70454E !important;
+  color: #4A6285 !important;
   font-weight: 400;
   font-style: italic;
 }
 
 .dark #hero h2, .dark section#hero h2, .dark .hero h2 {
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
 }
 
 #hero p, section#hero p, .hero p {
-  color: #4E2D28 !important;
+  color: #2D3748 !important;
   font-size: 1.05rem;
   line-height: 1.75;
 }
 
 .dark #hero p, .dark section#hero p, .dark .hero p {
-  color: #DDA8B0 !important;
+  color: #B8C9E0 !important;
 }
 
 /* ── Buttons ───────────────────────────────────────── */
@@ -262,8 +260,8 @@ a.btn,
 button.btn,
 input[type="submit"],
 input[type="button"] {
-  background-color: #70454E !important;
-  border-color: #70454E !important;
+  background-color: #2B4C7E !important;
+  border-color: #2B4C7E !important;
   color: #fff !important;
   border-radius: 50px !important;
   padding: 0.6rem 1.8rem !important;
@@ -272,7 +270,7 @@ input[type="button"] {
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  box-shadow: 0 3px 12px rgba(112, 69, 78, 0.35);
+  box-shadow: 0 3px 12px rgba(43, 76, 126, 0.35);
   transition: background-color var(--transition),
               border-color var(--transition),
               box-shadow var(--transition),
@@ -283,10 +281,10 @@ input[type="button"] {
 .btn-primary:hover,
 a.btn:hover,
 button.btn:hover {
-  background-color: #4E2D28 !important;
-  border-color: #4E2D28 !important;
+  background-color: #1E3A66 !important;
+  border-color: #1E3A66 !important;
   color: #fff !important;
-  box-shadow: 0 6px 20px rgba(78, 45, 40, 0.45) !important;
+  box-shadow: 0 6px 20px rgba(30, 58, 102, 0.45) !important;
   transform: translateY(-2px);
   opacity: 1 !important;
 }
@@ -338,7 +336,7 @@ button.btn:hover {
 /* "Read More" / post footer links */
 .entry-footer a,
 .read-more {
-  color: #AE736F !important;
+  color: #4A7BC5 !important;
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
@@ -348,14 +346,14 @@ button.btn:hover {
 
 .entry-footer a:hover,
 .read-more:hover {
-  color: #70454E !important;
+  color: #2B4C7E !important;
   letter-spacing: 0.08em;
   opacity: 1 !important;
 }
 
 /* ── Home Info (homeInfoParams hero card) ──────────── */
 .home-info {
-  background: linear-gradient(135deg, #F5EAEC 0%, #EDCED4 100%);
+  background: linear-gradient(135deg, #F8F8F8 0%, #E8EEF5 100%);
   border: 1px solid var(--tertiary);
   border-radius: var(--radius);
   padding: 2.8rem 2.5rem;
@@ -366,7 +364,7 @@ button.btn:hover {
 }
 
 .dark .home-info {
-  background: linear-gradient(135deg, #4E2D28 0%, #70454E 100%);
+  background: linear-gradient(135deg, #1C2B40 0%, #2B4C7E 100%);
   border-color: var(--tertiary);
 }
 
@@ -377,12 +375,12 @@ button.btn:hover {
 .home-info h1 {
   font-family: var(--font-heading) !important;
   font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
-  color: #281A1A !important;
+  color: #1C2B40 !important;
   font-weight: 700;
 }
 
 .dark .home-info h1 {
-  color: #F5EAEC !important;
+  color: #E8EEF5 !important;
 }
 
 .home-info .entry-content,
@@ -415,14 +413,14 @@ section .text-center h2 {
 /* ── Profile / Avatar Image ────────────────────────── */
 img.rounded-circle,
 .profile-image {
-  border: 4px solid #DDA8B0 !important;
-  box-shadow: 0 6px 24px rgba(221, 168, 176, 0.35) !important;
+  border: 4px solid #B8C9E0 !important;
+  box-shadow: 0 6px 24px rgba(43, 76, 126, 0.25) !important;
   transition: box-shadow var(--transition), transform var(--transition) !important;
 }
 
 img.rounded-circle:hover,
 .profile-image:hover {
-  box-shadow: 0 10px 36px rgba(221, 168, 176, 0.55) !important;
+  box-shadow: 0 10px 36px rgba(43, 76, 126, 0.40) !important;
   transform: scale(1.02);
 }
 
@@ -468,12 +466,12 @@ footer, .footer {
 }
 
 footer a, .footer a {
-  color: #AE736F !important;
+  color: #4A7BC5 !important;
   transition: color var(--transition) !important;
 }
 
 footer a:hover, .footer a:hover {
-  color: #70454E !important;
+  color: #2B4C7E !important;
   opacity: 1 !important;
 }
 
@@ -494,14 +492,12 @@ pre, code {
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-/* ── Hero Social Icons — match VER PROJETOS exactly ── */
-/* background-color: #70454E, color: #fff — same as a.btn / .btn */
-
+/* ── Hero Social Icon Buttons ──────────────────────── */
 a.btn.social-icon,
 .social-icons a,
 #hero a.btn {
-  background-color: #70454E !important;
-  border-color:     #70454E !important;
+  background-color: #2B4C7E !important;
+  border-color:     #2B4C7E !important;
   color:            #fff !important;
 }
 
@@ -515,10 +511,9 @@ a.btn.social-icon svg path,
   fill:  #fff !important;
 }
 
-/* High-specificity override for hero social icon buttons (beats index.css) */
 #hero a.btn.social-icon {
-  background-color: #70454E !important;
-  border-color:     #70454E !important;
+  background-color: #2B4C7E !important;
+  border-color:     #2B4C7E !important;
 }
 
 #hero a.btn.social-icon svg {
@@ -535,21 +530,20 @@ a.btn.social-icon i,
 a.btn.social-icon:hover,
 .social-icons a:hover,
 #hero a.btn:hover {
-  background-color: #4E2D28 !important;
-  border-color:     #4E2D28 !important;
+  background-color: #1E3A66 !important;
+  border-color:     #1E3A66 !important;
   color:            #fff !important;
   opacity: 1 !important;
 }
 
-/* Dark mode — same values */
 .dark a.btn.social-icon,
 .dark .social-icons a,
 .dark #hero a.btn,
 body.dark a.btn.social-icon,
 body.dark .social-icons a,
 body.dark #hero a.btn {
-  background-color: #70454E !important;
-  border-color:     #70454E !important;
+  background-color: #2B4C7E !important;
+  border-color:     #2B4C7E !important;
   color:            #fff !important;
 }
 
@@ -575,8 +569,8 @@ body.dark a.btn.social-icon i {
 body.dark a.btn.social-icon:hover,
 body.dark .social-icons a:hover,
 body.dark #hero a.btn:hover {
-  background-color: #4E2D28 !important;
-  border-color:     #4E2D28 !important;
+  background-color: #1E3A66 !important;
+  border-color:     #1E3A66 !important;
   color:            #fff !important;
   opacity: 1 !important;
 }
@@ -602,4 +596,48 @@ article .content h3,
   font-family: var(--font-heading) !important;
   color: var(--accent) !important;
   margin-top: 2rem;
+}
+
+/* =====================================================
+   UX Card Shortcode
+   ===================================================== */
+
+.ux-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(28, 43, 64, 0.10);
+  padding: 1.75rem 2rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #2B4C7E;
+}
+
+.ux-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2B4C7E;
+  margin: 0 0 0.6rem 0;
+  letter-spacing: -0.01em;
+}
+
+.ux-card__body {
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  color: #2D3748;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.dark .ux-card {
+  background-color: #1C2B40;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.30);
+  border-left-color: #7A9CC6;
+}
+
+.dark .ux-card__title {
+  color: #7A9CC6;
+}
+
+.dark .ux-card__body {
+  color: #B8C9E0;
 }
